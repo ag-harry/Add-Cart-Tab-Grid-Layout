@@ -1,0 +1,297 @@
+/* Universal selector */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
+    font-family: sans-serif;
+    line-height: 1.2;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2,
+h3 {
+    text-align: left;
+}
+
+h2,
+h3,
+a,
+ul,
+li,
+p {
+    margin-left: 52px;
+}
+
+/* Product */
+.product {
+    border: 5px solid black;
+    width: 1350px;
+    margin: 75px auto;
+    position: relative;
+
+    /* CSS GRID */
+    display: grid;
+    grid-template-columns: 512px 1fr 1fr;
+    /* gap: 20px; */
+}
+
+.product-title {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgba(88, 88, 88, 0.564);
+    padding: 25px;
+}
+
+header {
+    grid-column: 1 /-1;
+}
+
+.img-container {
+    display: inline;
+    margin-bottom: 0;
+}
+
+
+/* Price and Shipping */
+.price {
+    font-size: 22px;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+.price-adjust {
+    font-size: 28px;
+}
+
+.shipping {
+    font-size: 14px;
+    color: rgb(188, 188, 188);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    /* margin-left: -10px */
+}
+
+/* SALE COMPONENT */
+.sale {
+    background-color: rgb(214, 24, 24);
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    padding: 10px 18px;
+    display: inline-block;
+    position: absolute;
+    top: -25px;
+    left: -104px;
+}
+
+.sale {
+    animation: wobble 1.5s ease-in-out 2;
+    transform-origin: center top;
+    transition: padding .1s;
+    cursor: pointer;
+}
+
+
+@keyframes wobble {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(3deg);
+    }
+
+    50% {
+        transform: rotate(-3deg);
+    }
+
+    75% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* MORE INFORMATION */
+
+.more-info {
+    color: black;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.info-margin {
+    margin-bottom: 60px;
+}
+
+.more-info:link {
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.more-info:hover,
+.more-info:active {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+    transition: transform 0.1s;
+    transform: scale(1.2);
+}
+
+
+/* FEATURES */
+
+.features-title {
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-top: 25px;
+    margin-left: 0;
+}
+
+.features-list {
+    font-size: 18px;
+    list-style: square;
+    margin-left: 0;
+}
+
+/* .features-list li {
+    margin-bottom: 5px;
+} */
+
+/* .features-list li:last-child {
+    margin-bottom: 20px;
+} */
+
+/* COLOR OPTIONS */
+
+
+.color-container {
+    display: inline;
+    margin-left: 52px;
+
+}
+
+.colors {
+    height: 30px;
+    width: 30px;
+    filter: blur;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.natural-leather {
+    background-color: rgb(77, 51, 26)
+}
+
+.smokey-brown {
+    background-color: rgb(65, 55, 45);
+}
+
+.forest-green {
+    background-color: rgb(33, 54, 18);
+}
+
+.deep-blue {
+    background-color: rgb(3, 40, 67);
+}
+
+.sand {
+    background-color: rgb(164, 158, 141);
+}
+
+.ashe {
+    background-color: rgb(79, 79, 79);
+}
+
+.colors:hover {
+    transform: scale(2);
+    box-shadow: 0 0 0 2px rgba(165, 165, 165, 0.464);
+    transition: transform 0.2s;
+    transform: scale(1.8);
+    cursor: pointer;
+}
+
+
+/*  BUTTON  */
+
+.add-cart {
+    font-size: 20px;
+    border: 0px solid;
+    color: rgb(253, 253, 253);
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    padding: 20px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    grid-column: 1 / -1;
+}
+
+.add-cart:hover {
+    border-top: 4px solid black;
+    color: rgb(0, 0, 0);
+    font-size: 21px;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    transition: transform 0.2s;
+}
+
+.add-cart:active {
+    color: rgb(0, 0, 0);
+    font-size: 21px;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+}
+
+/* FLEXBOX */
+
+/* .flex-main {
+    display: flex;
+    justify-content: flex-start;
+} */
+
+.color-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.features-container {
+    display: inline;
+    margin-right: 47px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.price-container {
+    height: auto;
+}
+
+/* GRID LAYOUT */
+
+/* article {
+    display: grid;
+    grid-template-columns: 512px 1fr 1fr;
+    gap: 20px;
+} */
